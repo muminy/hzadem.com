@@ -25,7 +25,7 @@ export default function PostHeader({
         size="small"
         className={classNames(
           "absolute right-0 bottom-0 left-0 mx-auto z-10 text-white",
-          "xl:px-0 lg:px-0 md:px-0 px-10 w-full xl:py-4 lg:py-4 md:py-4 py-10"
+          "xl:px-0 lg:px-0 md:px-0 px-5 w-full xl:py-4 lg:py-4 md:py-4 py-5"
         )}
       >
         <h1

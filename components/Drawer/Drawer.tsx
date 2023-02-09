@@ -37,7 +37,7 @@ export default function Drawer({
                 leaveFrom="translate-x-0"
                 leaveTo="translate-x-full"
               >
-                <Dialog.Panel className="pointer-events-auto relative w-screen max-w-xs">
+                <Dialog.Panel className="pointer-events-auto relative w-screen max-w-[240px]">
                   <div className="flex flex-col overflow-y-auto bg-black py-6 px-8 h-screen shadow-xl">
                     {renderContent}
                   </div>

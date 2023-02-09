@@ -14,7 +14,7 @@ export default function BlogList({ posts }: BlogListProps) {
     <Container>
       <BlogMenu />
       <Repeater<PostType>
-        className="grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 xl:gap-8 gap-5"
+        className="grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-1 xl:gap-8 gap-5"
         renderItem={renderBlogList}
         items={posts}
       />
