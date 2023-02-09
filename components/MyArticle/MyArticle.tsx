@@ -22,7 +22,7 @@ export default function MyArticle({
         )}
       >
         <img
-          className="xl:h-[180px] h-[140px] object-cover rounded-xl mb-3"
+          className="h-[180px] object-cover rounded-xl mb-3"
           src={image}
         />
         <div className="text-gray-400 text-sm mb-2">{date}</div>
