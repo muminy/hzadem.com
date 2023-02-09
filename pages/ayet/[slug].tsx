@@ -21,7 +21,7 @@ export default function Ayet({ ayet, ayets }: AyetProps) {
     <Container>
       <MyVerse className="mb-10 block" isCurrent {...ayet} />
       <Repeater<AyetType>
-        className="grid xl:grid-cols-4 grid-cols-4 gap-4"
+        className="grid xl:grid-cols-4 grid-cols-2 gap-4"
         items={ayets}
         renderHeader={<MyTitle title="Diğer Ayetler" />}
         renderItem={renderVerse}
