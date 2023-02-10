@@ -1,13 +1,13 @@
 import { SeoProps } from "@/components/Seo"
 
 export const initialSeo: SeoProps = {
-  image: "https://gamewod.com/assets/images/banner.png",
+  image: "https://hzadem.com/assets/images/banner.png",
   title:
-    "Anasayfa | Gamewod.com E-sport haberler, son dakika gelişmeleri ve önemli anlar",
+    "Anasayfa | HZ Adem Burada sizlere islamiyet hakkında açıklayıyıcı yazılar ve kur'an içerisinden ayetler paylaşıyoruz. Dinimiz daha net öğrenebilir ve paylaşabilirsiniz.",
   description:
-    "Gamewod.com E-sport haberler, son dakika gelişmeleri ve önemli anları size sunar.",
+    "HZ Adem Burada sizlere islamiyet hakkında açıklayıyıcı yazılar ve kur'an içerisinden ayetler paylaşıyoruz. Dinimiz daha net öğrenebilir ve paylaşabilirsiniz.",
   twitter: {
-    site: "@gamewodcom",
+    site: "@hzadem",
     cardType: "summary_large_image",
   },
 }

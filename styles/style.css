@@ -14,16 +14,20 @@ body {
   @apply font-medium text-black text-opacity-80 mb-8
 }
 
-.acontent blockquote {
+.acontent blockquote  {
   @apply border-l-2 border-l-gray-600 pl-3 py-2 mb-8;
 }
 
+.acontent blockquote cite {
+  @apply text-sm mt-2 block text-gray-500;
+}
+
 .acontent blockquote p {
-  @apply mb-0;
+  @apply mb-0 text-black;
 }
 
 .acontent :is(h2,h3,h4,h5,h6) {
-  @apply uppercase font-bold tracking-wider mb-8
+  @apply font-bold mb-4
 }
 
 .maxline {

@@ -1,6 +1,7 @@
 import Container from "@/components/Container"
 import Markdown from "@/components/Markdown"
 import { PostHeader } from "@/components/PostDetail"
+import Seo from "@/components/Seo"
 import getPosts, { getPost } from "@/lib/posts"
 import { PostType } from "@/types/index"
 import { GetStaticPropsContext } from "next"
@@ -12,6 +13,11 @@ type PostProps = {
 export default function Post({ post }: PostProps) {
   return (
     <Container size="xlarge" className="acontent">
+      <Seo
+        title={post.title}
+        description={post.description}
+        image={`/api/og/blog?title=${post.title}`}
+      />
       <PostHeader
         author="Mümin"
         image={post.image}

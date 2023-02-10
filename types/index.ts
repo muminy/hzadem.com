@@ -14,6 +14,7 @@ export type PostType = {
   image: string
   body: string
   date: string
+  tags: string[]
 }
 
 export type AyetType = {

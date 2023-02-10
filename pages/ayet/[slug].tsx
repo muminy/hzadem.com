@@ -2,11 +2,10 @@ import Container from "@/components/Container"
 import MyTitle from "@/components/MyTitle"
 import MyVerse from "@/components/MyVerse"
 import Repeater from "@/components/Repeater"
-import SwiperWrapper from "@/components/SwiperWrapper"
+import Seo from "@/components/Seo"
 import getAyets, { getAyet } from "@/lib/ayets"
 import { AyetType } from "@/types/index"
 import { GetStaticPropsContext } from "next"
-import { SwiperSlide } from "swiper/react"
 
 type AyetProps = {
   ayet: AyetType
@@ -19,6 +18,11 @@ export default function Ayet({ ayet, ayets }: AyetProps) {
   }
   return (
     <Container>
+      <Seo
+        title={ayet.title}
+        description={ayet.description}
+        image={`/api/og/blog?title=${ayet.title}`}
+      />
       <MyVerse className="mb-10 block" isCurrent {...ayet} />
       <Repeater<AyetType>
         className="grid xl:grid-cols-4 grid-cols-2 gap-4"

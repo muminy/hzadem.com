@@ -11,26 +11,36 @@ export default function Seo(props: SeoProps) {
     ...props,
   }
 
+  const description =
+    "HZ Adem Burada sizlere islamiyet hakkında açıklayıyıcı yazılar ve kur'an içerisinden ayetler paylaşıyoruz. Dinimiz daha net öğrenebilir ve paylaşabilirsiniz."
+
+  const contentDescription = props.description ?? description
+  const image = props.image ?? meta.image
+
+  const title = props.title
+    ? `${props.title} | ${description}`
+    : meta.title
+
   return (
     <Head>
-      <title>{meta.title}</title>
+      <title>{title}</title>
       <meta name="robots" content="follow, index" />
-      <meta content={meta.description} name="description" />
+      <meta name="description" content={meta.description} />
       <meta
         property="og:url"
-        content={`https://gamerpov.com${router.asPath}`}
+        content={`https://hzadem.com${router.asPath}`}
       />
-      <link rel="canonical" href={`https://gamerpov.com${router.asPath}`} />
-      <meta property="og:type" content={"website"} />
-      <meta property="og:site_name" content="Gamerpov" />
-      <meta property="og:description" content={meta.description} />
-      <meta property="og:title" content={meta.title} />
-      <meta property="og:image" content={meta.image} />
+      <link rel="canonical" href={`https://hzadem.com${router.asPath}`} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@muminy61" />
-      <meta name="twitter:title" content={meta.title} />
-      <meta name="twitter:description" content={meta.description} />
-      <meta name="twitter:image" content={meta.image} />
+      <meta name="twitter:site" content="@hzadem" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={contentDescription} />
+      <meta name="twitter:image" content={image} />
+      <meta property="og:type" content={"website"} />
+      <meta property="og:site_name" content="Hzadem" />
+      <meta property="og:description" content={contentDescription} />
+      <meta property="og:title" content={title} />
+      <meta property="og:image" content={image} />
       {meta.date && (
         <meta property="article:published_time" content={meta.date} />
       )}

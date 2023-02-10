@@ -1,38 +1,40 @@
-import { MenuType } from "@/types/index"
 import classNames from "classnames"
+import { BlogMenuProps } from "."
 import Icon from "../Icon"
-import MyTitle from "../MyTitle"
-import Permalink from "../Permalink"
 import Repeater from "../Repeater"
+import { BlogMenuTypes } from "../Sections"
 
-export default function BlogMenu() {
-  const menuList: MenuType[] = [
-    { href: "/islam", title: "Tümü" },
-    { href: "/dua", title: "Dualar" },
-    { href: "/hadis", title: "Hadisler" },
-    { href: "/sunnet", title: "Sünnet" },
+type ListType = Record<"name", BlogMenuTypes>
+
+export default function BlogMenu({ getMenu, menu }: BlogMenuProps) {
+  const menuList: ListType[] = [
+    { name: BlogMenuTypes.ALL },
+    { name: BlogMenuTypes.HADIS },
+    { name: BlogMenuTypes.SUNNET },
   ]
 
-  const renderBlogMenu = (item: MenuType, index: number) => {
+  const renderBlogMenu = (item: ListType, index: number) => {
     return (
       <button
         key={index}
         className={classNames(
           "font-semibold",
-          "first:bg-gray-100 px-3 py-2",
+          "px-3 py-2",
           "rounded-xl text-[15px]",
-          "hover:bg-gray-100 duration-200"
+          "hover:bg-gray-100 duration-200",
+          { "bg-gray-100": menu === item.name }
         )}
-        title={item.title}
+        onClick={() => getMenu(item.name)}
+        title={item.name}
       >
-        {item.title}
+        {item.name}
       </button>
     )
   }
 
   return (
     <div className="flex items-center space-x-4 mb-5">
-      <Repeater<MenuType>
+      <Repeater<ListType>
         items={menuList}
         className="flex items-center space-x-0.5"
         renderItem={renderBlogMenu}

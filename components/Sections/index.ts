@@ -10,3 +10,9 @@ export type BlogListProps = {
 export type AyetSwiperProps = {
   ayets: AyetType[]
 }
+
+export enum BlogMenuTypes {
+  "ALL" = "ALL",
+  "HADIS" = "hadis",
+  "SUNNET" = "sünnet",
+}

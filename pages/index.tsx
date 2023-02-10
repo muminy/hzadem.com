@@ -1,6 +1,8 @@
 import Container from "@/components/Container"
 import { BlogList, SwiperList } from "@/components/Sections"
-import getAyets, { getAyet } from "@/lib/ayets"
+import Seo from "@/components/Seo"
+import { initialSeo } from "@/constants/seo"
+import getAyets from "@/lib/ayets"
 import getPosts from "../lib/posts"
 import { AyetType, PostType } from "../types"
 
@@ -10,9 +12,9 @@ type HomeProps = {
 }
 
 export default function Home({ posts, ayets }: HomeProps) {
-  console.log(ayets)
   return (
     <Container>
+      <Seo {...initialSeo} />
       <SwiperList ayets={ayets} />
       <BlogList posts={posts} />
     </Container>

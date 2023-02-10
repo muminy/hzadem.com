@@ -18,7 +18,7 @@ export default function PostHeader({
       size="xlarge"
     >
       <img
-        className="object-cover xl:h-[500px] lg:h-[300px] h-[240px] w-full"
+        className="object-cover self-center xl:h-[500px] lg:h-[300px] h-[240px] w-full"
         src={image}
       />
       <Container
