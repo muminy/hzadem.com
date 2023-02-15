@@ -1,51 +1,66 @@
 export const BlogMock = [
   {
-    title:
-      "Ey İnananlar! Sabredin, düşmanlarınızdan daha sabırlı olun, cihada hazır bulunun, Allah'a karşı gelmekten sakının ki başarıya erişebilesiniz.",
-    ayet: "Âl-i İmran Suresi; 200. Ayet",
+    category: "Et",
     image:
-      "https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=654&q=80",
+      "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    title:
+      "İstanbul'da Nefis Burgerlerini Sıcak Sıcak Eve Sipariş Edebileceğiniz En İyi 10 Burgerci",
+    user: "Esra Memiş",
   },
   {
-    title:
-      "Eğer Allah seni bir zarara uğratırsa, onu kendisinden başka giderecek yoktur. Ve eğer sana bir hayır verirse, (bunu da geri alacak yoktur). Şüphesiz O her şeye kadirdir.",
-    ayet: "En'am Suresi; 17. Ayet",
+    category: "Kahvaltı",
     image:
-      "https://images.unsplash.com/photo-1637518026117-9d1ac5e73f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      "https://images.unsplash.com/photo-1576867757603-05b134ebc379?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    title:
+      "İstanbul'da Evinize Sıcak Sıcak Sipariş Verebileceğiniz En İyi 10 Lahmacuncu",
+    user: "Esra Memiş",
   },
   {
-    title:
-      "Şüphesiz peygamberlerimize ve iman edenlere, hem dünya hayatında, hem şahitlerin şahitlik edecekleri günde yardım ederiz.",
-    ayet: "Mü'min Suresi; 51. Ayet",
+    category: "Meze",
     image:
-      "https://images.unsplash.com/photo-1631432526080-5abd83dafc8a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80",
+      "https://images.unsplash.com/photo-1608835291093-394b0c943a75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80",
+    title:
+      "Sevgilinizi Alıp Mutlu Mesut Vakit Geçirebileceğiniz 10 Aşk ve Lezzet Dolu Mekan",
+    user: "Mümin Yıldırım",
   },
   {
-    title:
-      "İman edip de iyi davranışlarda bulunanlara gelince, onlar için çok merhametli olan Allah, (gönüllerde) bir sevgi yaratacaktır.",
-    ayet: "Meryem Suresi; 96. Ayet",
+    category: "Tatlı",
     image:
-      "https://images.unsplash.com/photo-1626079651751-2f2c31f38223?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=654&q=80",
+      "https://images.unsplash.com/photo-1547573854-74d2a71d0826?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    title:
+      "Suadiye'de Lezzet Dolu Bir Gün Geçirmek İsteyen Gurmelere 10 Nefis Mekan",
+    user: "Nanu Bati",
   },
   {
-    title:
-      "De ki: Allah'ın bizim için yazdığından başkası bize asla erişmez. O bizim mevlâmızdır. Onun için müminler yalnız Allah'a dayanıp güvensinler.",
-    ayet: "Tevbe Suresi; 51. Ayet",
+    category: "Meze",
     image:
-      "https://images.unsplash.com/photo-1527838832700-5059252407fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=796&q=80",
+      "https://images.unsplash.com/photo-1608835291093-394b0c943a75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80",
+    title:
+      "Sevgilinizi Alıp Mutlu Mesut Vakit Geçirebileceğiniz 10 Aşk ve Lezzet Dolu Mekan",
+    user: "Mümin Yıldırım",
   },
   {
-    title:
-      "Şüphesiz ki bu Kur'an en doğru yola iletir; iyi davranışlarda bulunan müminlere, kendileri için büyük bir mükâfat olduğunu müjdeler.",
-    ayet: "İsra Suresi; 9. Ayet",
+    category: "Tatlı",
     image:
-      "https://images.unsplash.com/photo-1634037440110-e1f62286f57a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80",
+      "https://images.unsplash.com/photo-1547573854-74d2a71d0826?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    title:
+      "Suadiye'de Lezzet Dolu Bir Gün Geçirmek İsteyen Gurmelere 10 Nefis Mekan",
+    user: "Nanu Bati",
   },
   {
-    title:
-      "De ki: Eğer (haktan) saparsam, kendi aleyhime sapmış olurum. Eğer doğru yolu bulursam, bu da Rabbimin bana vahyettiği (Kur'an) sayesindedir. Şüphesiz O, işitendir, yakındır.",
-    ayet: "Sebe' Suresi; 50. Ayet",
+    category: "Meze",
     image:
-      "https://images.unsplash.com/photo-1598723106396-f89827f6aa1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1746&q=80",
+      "https://images.unsplash.com/photo-1608835291093-394b0c943a75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80",
+    title:
+      "Sevgilinizi Alıp Mutlu Mesut Vakit Geçirebileceğiniz 10 Aşk ve Lezzet Dolu Mekan",
+    user: "Mümin Yıldırım",
+  },
+  {
+    category: "Tatlı",
+    image:
+      "https://images.unsplash.com/photo-1547573854-74d2a71d0826?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    title:
+      "Suadiye'de Lezzet Dolu Bir Gün Geçirmek İsteyen Gurmelere 10 Nefis Mekan",
+    user: "Nanu Bati",
   },
 ]

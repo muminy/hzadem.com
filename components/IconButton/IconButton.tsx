@@ -20,8 +20,7 @@ export default function IconButton({
       className={cn(
         style.container,
         className,
-        "dark:bg-dark-secondary min-w-[36px]",
-        "duration-200",
+        "dark:bg-dark-secondary bg-gray-100 dark:text-white",
         {
           "bg-dark-secondary text-white": isDark,
         }

@@ -5,7 +5,10 @@ export default function Card({ className, ...props }: CardProps) {
   return (
     <div
       {...props}
-      className={classNames("bg-white p-4 rounded-xl", className)}
+      className={classNames(
+        "dark:bg-dark-secondary bg-gray-100 p-4 rounded-xl",
+        className
+      )}
     />
   )
 }

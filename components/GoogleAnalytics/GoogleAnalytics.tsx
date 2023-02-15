@@ -3,7 +3,7 @@ import Script from "next/script"
 import { useEffect } from "react"
 import { pageview } from "@/lib/ga"
 
-const GA_TRACKING_ID = "G-GRB2H9NKZ1"
+const GA_TRACKING_ID = "G-T7ZNR8X5XG"
 
 export default function GoogleAnalytics() {
   const router = useRouter()

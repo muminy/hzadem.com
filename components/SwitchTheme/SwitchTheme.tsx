@@ -1,6 +1,7 @@
+import classNames from "classnames"
 import { useTheme } from "next-themes"
 import { useState, useEffect } from "react"
-import Button from "../Button"
+import IconButton from "../IconButton"
 
 export default function SwitchTheme() {
   const [mounted, setMounted] = useState(false)
@@ -17,5 +18,17 @@ export default function SwitchTheme() {
 
   if (!mounted) return null
 
-  return <Button.Gradient>Switch</Button.Gradient>
+  return (
+    <IconButton
+      isDark
+      text={isDark ? "Dark" : "Light"}
+      icon={isDark ? "moonFill" : "sunFill"}
+      className={classNames(
+        "rounded-full h-9 px-3 space-x-1",
+        "xl:w-auto w-9"
+      )}
+      textClassName="text-xs xl:block hidden"
+      onClick={changeTheme}
+    />
+  )
 }

@@ -6,28 +6,55 @@ body {
   font-family: "Inter", sans-serif;
   min-height: 100vh;
   position: relative;
-  background-color: #fff;
+  @apply  dark:bg-dark-bg;
 }
 
-
-.acontent p {
-  @apply font-medium text-black text-opacity-80 mb-8
+.article-content p {
+  @apply dark:font-light text-black mb-8 dark:text-white dark:text-opacity-50 text-opacity-70;
 }
 
-.acontent blockquote  {
-  @apply border-l-2 border-l-gray-600 pl-3 py-2 mb-8;
+.article-content blockquote  {
+  @apply border-l-2 border-l-gray-600 pl-3 py-2 mb-8 mt-8 dark:font-medium;
 }
 
-.acontent blockquote cite {
-  @apply text-sm mt-2 block text-gray-500;
+.article-content blockquote cite {
+  @apply text-sm mt-2 block text-gray-500 dark:text-white dark:text-opacity-80 dark:font-light;
 }
 
-.acontent blockquote p {
-  @apply mb-0 text-black;
+.article-content blockquote p {
+  @apply mb-0 mt-0 text-black dark:text-white;
 }
 
-.acontent :is(h2,h3,h4,h5,h6) {
-  @apply font-bold mb-4
+.article-content video {
+  @apply w-full
+}
+.article-content :is(h1, h2, h3, h4, h5, h6) {
+  @apply font-bold mb-4;
+  @apply dark:text-white;
+}
+.article-content img {
+  @apply rounded-3xl;
+}
+
+.article-content figure {
+  @apply mt-10 mb-6 rounded-3xl relative;
+}
+.article-content figure figcaption {
+  @apply text-center text-sm absolute top-2 left-2 px-4 py-2;
+  @apply bg-primary text-black rounded-3xl;
+}
+
+.article-content ul {
+  @apply list-decimal px-5 mt-5 space-y-3;
+}
+
+.article-content ul li {
+  @apply text-gray-900 dark:text-gray-400;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .maxline {
@@ -37,4 +64,24 @@ body {
   -webkit-line-clamp: 2; /* number of lines to show */
           line-clamp: 2; 
   -webkit-box-orient: vertical;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }

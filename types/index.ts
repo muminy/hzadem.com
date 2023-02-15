@@ -1,25 +1,51 @@
-import { IconTypes } from "../icons"
+import { AxiosError } from "axios"
+import { CommentType } from "./comment"
+import { WPImage } from "./wpgraphql"
+
+export type ErrorResponseType = {
+  //
+  status: number
+}
+
+export type ErrorCommonType = {
+  message?: string
+  error: AxiosError<ErrorResponseType>
+}
+
+export type CategoryType = {
+  id: number
+  name: string
+  slug: string
+  showmenu: boolean
+  image: {
+    sourceUrl: string
+    title: string
+  }
+}
 
 export type MenuType = {
   href: string
   title: string
-  icon?: IconTypes
 }
 
+export type NameValue = {
+  name: string
+  value?: string | number
+}
 export type PostType = {
-  title: string
-  description?: string
-  slug: string
-  id: number
-  image: string
-  body: string
+  commentCount: number
   date: string
-  tags: string[]
-}
-
-export type AyetType = {
-  title: string
-  description: string
+  excerpt: string
+  readingTime: number
   slug: string
-  id: number
+  comments: CommentType[]
+  postId: number
+  title: string
+  content: string
+  categories: CategoryType[]
+  author: {
+    name: string
+    description: string
+  }
+  image: WPImage
 }

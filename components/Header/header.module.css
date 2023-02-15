@@ -1,6 +1,6 @@
 .header {
-  @apply flex items-center justify-center h-[70px];
-  @apply bg-white shadow-sm;
+  @apply flex items-center justify-center xl:px-24 lg:px-16 px-4;
+  @apply border-b border-b-dark-border 
 }
 
 .container {

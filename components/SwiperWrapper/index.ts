@@ -6,8 +6,6 @@ export type SwiperWrapperProps = Pick<
   "slidesPerView" | "spaceBetween"
 > & {
   children: ReactNode
-  title?: string
-  showButtons?: boolean
-  className?: string
+  title: string
 }
 export { default } from "./SwiperWrapper"

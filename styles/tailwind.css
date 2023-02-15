@@ -2,3 +2,19 @@
 @tailwind components;
 @import "./components/button.css";
 @tailwind utilities;
+
+@layer components {
+  .center {
+    @apply flex items-center;
+  }
+
+  .center-center {
+    @apply flex items-center justify-center;
+  }
+
+  .custom-input {
+    @apply w-full appearance-none resize-none rounded-xl dark:bg-dark-secondary bg-gray-100;
+    @apply outline-none focus:outline-none dark:ring-offset-dark-bg focus:ring-2 focus:ring-offset-1 ring-green-400;
+    @apply text-sm font-semibold px-3 py-2;
+  }
+}

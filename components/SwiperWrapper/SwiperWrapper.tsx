@@ -21,7 +21,7 @@ const ArrowButtons = () => {
           "disabled:dark:bg-dark-secondary disabled:dark:text-white disabled:dark:!text-opacity-25",
           "disabled:text-opacity-25"
         )}
-        text="Önceki"
+        text="Prev"
         isDark
         textClassName="text-xs"
       />
@@ -36,7 +36,7 @@ const ArrowButtons = () => {
           "disabled:dark:text-opacity-25",
           "disabled:text-opacity-25"
         )}
-        text="Sonraki"
+        text="Next"
         isDark
         textClassName="text-xs mr-1"
       />
@@ -49,17 +49,13 @@ export default function SwiperWrapper({
   slidesPerView = "auto",
   spaceBetween,
   title,
-  showButtons = true,
-  className,
 }: SwiperWrapperProps) {
   return (
-    <div className={classNames("mb-10", className)}>
-      {showButtons && (
-        <div className="flex justify-between items-center py-4">
-          <div className="font-extrabold text-lg">{title}</div>
-          <ArrowButtons />
-        </div>
-      )}
+    <div className={classNames("mb-10")}>
+      <div className="flex justify-between items-center py-4">
+        <div className="font-bold">{title}</div>
+        <ArrowButtons />
+      </div>
       <Swiper
         slidesPerView={slidesPerView}
         spaceBetween={spaceBetween}

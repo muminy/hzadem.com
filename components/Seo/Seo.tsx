@@ -2,6 +2,7 @@ import Head from "next/head"
 import { SeoProps } from "."
 import { useRouter } from "next/router"
 import { initialSeo } from "@/constants/seo"
+import { domain } from "@/constants/default"
 
 export default function Seo(props: SeoProps) {
   const router = useRouter()
@@ -11,8 +12,7 @@ export default function Seo(props: SeoProps) {
     ...props,
   }
 
-  const description =
-    "HZ Adem Burada sizlere islamiyet hakkında açıklayıyıcı yazılar ve kur'an içerisinden ayetler paylaşıyoruz. Dinimiz daha net öğrenebilir ve paylaşabilirsiniz."
+  const description = "Hz Adem ile dinimizi öğreniyoruz"
 
   const contentDescription = props.description ?? description
   const image = props.image ?? meta.image
@@ -26,18 +26,15 @@ export default function Seo(props: SeoProps) {
       <title>{title}</title>
       <meta name="robots" content="follow, index" />
       <meta name="description" content={meta.description} />
-      <meta
-        property="og:url"
-        content={`https://hzadem.com${router.asPath}`}
-      />
-      <link rel="canonical" href={`https://hzadem.com${router.asPath}`} />
+      <meta property="og:url" content={`${domain}${router.asPath}`} />
+      <link rel="canonical" href={`${domain}${router.asPath}`} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@hzadem" />
+      <meta name="twitter:site" content="@hzademcom" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={contentDescription} />
       <meta name="twitter:image" content={image} />
       <meta property="og:type" content={"website"} />
-      <meta property="og:site_name" content="Hzadem" />
+      <meta property="og:site_name" content="Hz Adem" />
       <meta property="og:description" content={contentDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:image" content={image} />
