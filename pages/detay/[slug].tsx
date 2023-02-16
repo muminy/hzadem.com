@@ -38,7 +38,10 @@ export default function Detail({ post }: PostDetailProps) {
       <Breadcrumb
         items={[
           { title: "Anasayfa", to: "/" },
-          { title: post.categories[0].name ?? "Yazı", to: "/" },
+          {
+            title: post.categories[0].name ?? "Yazı",
+            to: `/kategori/${post.categories[0].slug}`,
+          },
           {
             title: post.title,
           },
@@ -55,7 +58,7 @@ export default function Detail({ post }: PostDetailProps) {
         <Repeater<CategoryType>
           items={post.categories}
           renderItem={renderItem}
-          className="flex space-x-2 mb-2"
+          className="flex space-x-2 mb-3"
         />
         <div
           className="article-content"

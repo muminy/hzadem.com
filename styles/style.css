@@ -12,7 +12,9 @@ body {
 .article-content p {
   @apply dark:font-light text-black mb-8 dark:text-white dark:text-opacity-50 text-opacity-70;
 }
-
+.article-content a {
+  @apply text-blue-600
+}
 .article-content blockquote  {
   @apply border-l-2 border-l-gray-600 pl-3 py-2 mb-8 mt-8 dark:font-medium;
 }
@@ -45,7 +47,7 @@ body {
   @apply border-b border-r px-4 py-2
 }
 .article-content figure {
-  @apply mt-10 mb-6 rounded-3xl relative;
+  @apply mt-0 mb-6 rounded-3xl relative;
 }
 .article-content figure figcaption {
   @apply text-center text-sm absolute top-2 left-2 px-4 py-2;
@@ -53,11 +55,11 @@ body {
 }
 
 .article-content ul {
-  @apply list-decimal px-5 mt-5 space-y-3;
+  @apply list-disc px-10 mt-5 space-y-1 mb-5;
 }
 
 .article-content ul li {
-  @apply text-gray-900 dark:text-gray-400;
+  @apply dark:font-light dark:text-white dark:text-opacity-60;
 }
 .swiper {
   width: 100%;
