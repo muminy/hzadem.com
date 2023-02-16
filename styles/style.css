@@ -33,9 +33,17 @@ body {
   @apply dark:text-white;
 }
 .article-content img {
-  @apply rounded-3xl;
+  @apply max-h-[500px] object-cover w-full;
 }
-
+.article-content table {
+  @apply w-full border 
+}
+.article-content figure.wp-block-table {
+  @apply w-full mt-0
+}
+.article-content td {
+  @apply border-b border-r px-4 py-2
+}
 .article-content figure {
   @apply mt-10 mb-6 rounded-3xl relative;
 }

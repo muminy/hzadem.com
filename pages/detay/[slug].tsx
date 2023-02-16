@@ -52,19 +52,16 @@ export default function Detail({ post }: PostDetailProps) {
         title={post.title}
       />
       <Container size="large">
+        <Repeater<CategoryType>
+          items={post.categories}
+          renderItem={renderItem}
+          className="flex space-x-2 mb-2"
+        />
         <div
           className="article-content"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
         <Share text={post.title} />
-        <Repeater<CategoryType>
-          items={post.categories}
-          renderItem={renderItem}
-          renderHeader={
-            <Title className="mt-10" title="İlgili Kategoriler" />
-          }
-          className="flex space-x-2"
-        />
         <Comments
           className="mt-10"
           postId={post.postId}

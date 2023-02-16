@@ -8,8 +8,8 @@ export default function Badge({ text, className, slug }: TagType) {
       href={`/kategori/${slug}`}
       title={text}
       className={classNames(
-        "px-4 rounded-xl text-sm font-semibold",
-        "bg-yellow-100 dark:text-black",
+        "px-3 rounded-xl text-sm h-8 font-bold",
+        "bg-gray-100 dark:text-black",
         "flex items-center",
         className
       )}
