@@ -12,7 +12,7 @@ export default function Seo(props: SeoProps) {
     ...props,
   }
 
-  const description = "Hz Adem ile dinimizi öğreniyoruz"
+  const description = "Kur'an ışığında Kur'an'a Dair Her Şey!"
 
   const contentDescription = props.description ?? description
   const image = props.image ?? meta.image
