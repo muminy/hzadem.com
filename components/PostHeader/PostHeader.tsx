@@ -19,7 +19,7 @@ export default function PostHeader({
       )}
     >
       <img
-        className="object-cover self-center xl:h-[500px] lg:h-[300px] h-[240px] w-full"
+        className="object-cover self-center xl:h-[500px] lg:h-[300px] h-[240px] w-full xl:mx-0 lg:mx-0 -mx-4"
         src={image}
         alt={title}
       />
