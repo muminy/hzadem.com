@@ -87,7 +87,9 @@ export default function Comment({
       <Repeater<CommentType>
         items={items}
         className="space-y-3"
-        renderNotFound={<NotFound title="İlk yorumu sen yap" />}
+        renderNotFound={
+          <NotFound title="Yorum Yok" description="İlk yorumu sen yap" />
+        }
         renderItem={(item, index) => <CommentCard {...item} key={index} />}
       />
     </div>
