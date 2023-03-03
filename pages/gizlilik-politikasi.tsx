@@ -17,7 +17,7 @@ export default function GizlilikPolitikasi() {
       />
       <h1 className="!text-4xl">Gizlilik Politikası</h1>
       <div className="mb-10 text-sm text-gray-600 dark:text-gray-400">
-        Son Güncelleme: 22 Ocak, 2023 04:10
+        Son Güncelleme: 15 Şubat 2023 21:17
       </div>
 
       <p>

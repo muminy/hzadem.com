@@ -23,8 +23,9 @@ export default function Seo(props: SeoProps) {
 
   return (
     <Head>
+      <meta charSet="utf-8" />
       <title>{title}</title>
-      <meta name="robots" content="follow, index" />
+      <meta name="robots" content="index,follow" />
       <meta name="description" content={meta.description} />
       <meta property="og:url" content={`${domain}${router.asPath}`} />
       <link rel="canonical" href={`${domain}${router.asPath}`} />
@@ -34,7 +35,7 @@ export default function Seo(props: SeoProps) {
       <meta name="twitter:description" content={contentDescription} />
       <meta name="twitter:image" content={image} />
       <meta property="og:type" content={"website"} />
-      <meta property="og:site_name" content="Hz Adem" />
+      <meta property="og:site_name" content={title} />
       <meta property="og:description" content={contentDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:image" content={image} />

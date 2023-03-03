@@ -20,7 +20,7 @@ export default function Category({ posts, category }: CategoryPageProps) {
       <Seo
         title={category.name}
         description={`${category.name} Kategorisine ait son yazılarımız.`}
-        image={`${domain}/api/og/blog?title=${category.name}`}
+        image={category.image.sourceUrl}
       />
       <Breadcrumb
         items={[{ title: "Anasayfa", to: "/" }, { title: category.name }]}

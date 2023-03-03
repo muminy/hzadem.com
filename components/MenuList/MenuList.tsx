@@ -16,13 +16,11 @@ export default function MenuList({ isResponsive }: MenuListProps) {
       <li key={item.slug}>
         <Permalink
           className={cn(
-            "px-3 py-2.5 rounded-2xl duration-200",
-            "font-bold text-sm",
+            "px-3 py-2.5 rounded-2xl duration-200 text-white",
+            "font-bold text-sm hover:bg-dark-secondary",
             {
-              "bg-gray-100 dark:bg-dark-secondary": isActive,
+              "bg-dark-secondary": isActive,
               "px-0 h-8 py-0 text-white !bg-transparent": isResponsive,
-              "hover:dark:bg-dark-secondary hover:bg-gray-100 text-black dark:text-white":
-                !isResponsive,
             }
           )}
           href={`/kategori/${item.slug}`}

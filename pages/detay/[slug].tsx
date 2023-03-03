@@ -34,6 +34,7 @@ export default function Detail({ post }: PostDetailProps) {
         title={post.title}
         description={removeHtmlTags(post.excerpt)}
         image={post.image.sourceUrl}
+        date={post.date}
       />
       <Breadcrumb
         items={[
