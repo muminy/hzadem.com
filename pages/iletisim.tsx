@@ -28,7 +28,7 @@ export default function Iletisim() {
         key={key}
         className={classNames(
           "flex items-center space-x-2 text-sm py-3 px-4 rounded-xl",
-          "bg-gray-100 dark:bg-dark-secondary"
+          "bg-gray-100 dark:bg-dark-secondary text-black dark:text-white"
         )}
       >
         <div>{item.placeholder ?? item.title}</div>
@@ -37,15 +37,17 @@ export default function Iletisim() {
     )
   }
   return (
-    <Container size="large" className="article-content">
+    <Container size="large">
       <Seo title="İletişim" description="hzadem.com iletişim bilgileri" />
       <Breadcrumb
         items={[{ title: "Anasayfa", to: "/" }, { title: "İletişim" }]}
       />
-      <h1>İletişim Adreslerimiz</h1>
+      <h1 className="mb-5 mt-10 text-4xl font-black">
+        İletişim Adreslerimiz
+      </h1>
 
       <Repeater<ContactType>
-        className="flex flex-col items-baseline space-y-2"
+        className="flex flex-col items-baseline space-y-2 article-content"
         items={contacts}
         renderItem={renderItem}
       />

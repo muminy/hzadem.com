@@ -20,12 +20,7 @@ export default function Home({ hero, remaining }: HomeStaticProps) {
       <BlogList
         repeaterClassName="grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-1 gap-2"
         blogType="IMAGE"
-        renderHeader={
-          <Title
-            description="Gün içerisinde yazılmış yazılar burada listelenmektedir"
-            title="Son Yazılar"
-          />
-        }
+        renderHeader={<Title title="Son Yazılar" />}
         className="mb-10"
         items={hero}
       />

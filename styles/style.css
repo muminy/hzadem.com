@@ -58,6 +58,9 @@ body {
   @apply list-disc px-10 mt-5 space-y-1 mb-5;
 }
 
+.article-content b, strong {
+  @apply text-black dark:text-white
+}
 .article-content ul li {
   @apply dark:font-light dark:text-white dark:text-opacity-60;
 }
