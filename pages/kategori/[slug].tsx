@@ -16,25 +16,23 @@ type CategoryPageProps = {
 
 export default function Category({ posts, category }: CategoryPageProps) {
   return (
-    <Container>
+    <Container size="large" className="pt-5">
       <Seo
         title={category.name}
-        description={`${category.name} Kategorisine ait son yazılarımız.`}
-        image={category.image.sourceUrl}
-      />
-      <Breadcrumb
-        items={[{ title: "Anasayfa", to: "/" }, { title: category.name }]}
+        description={`${category.name} Kategorisine ait son paylaşımlar.`}
+        image={`${domain}/api/og/blog?title=${category.name}`}
       />
       <BlogList
-        repeaterClassName="grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-2"
-        blogType="IMAGE"
+        repeaterClassName="grid grid-cols-1 gap-2 mt-5"
+        blogType="DEFAULT"
         items={posts}
         notFound={{
-          title: `Kategoriye ait yazı bulunamadı.`,
+          title: `Bulunamadı`,
+          description: "Bu Kategoriye ait yazı bulunamdı.",
         }}
         renderHeader={
           <Title
-            description={`${category.name} Kategorisine ait son yazılar.`}
+            description={`${category.name} Kategorisine ait son paylaşımlar.`}
             title={`${category.name}`}
           />
         }

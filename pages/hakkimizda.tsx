@@ -1,23 +1,20 @@
-import Breadcrumb from "@/components/Breadcrumb"
 import Container from "@/components/Container"
 import Logo from "@/components/Logo"
 import Seo from "@/components/Seo"
 
-export default function Hakkimizda() {
+export default function About() {
   return (
-    <Container size="small">
-      <Seo title="Hakkımızda" description="hzadem.com Hakkında" />
-      <Breadcrumb
-        items={[{ title: "Anasayfa", to: "/" }, { title: "Hakkımızda" }]}
+    <Container size="small" className="article-content">
+      <Seo title="Hakkımızda" description="HzAdem.com Hakkında" />
+      <Logo
+        size={40}
+        className="my-10 flex justify-center dark:!text-white !text-black"
       />
-      <Logo className="mt-10 mb-5 flex justify-center" />
-      <div className="article-content">
-        <p className="text-center">
-          Misyonumuz, okuyuculara İslami inançlar ve uygulamalar, Müslüman
-          tarihi, İslam sanatı ve kültürü ve güncel olaylar dahil olmak
-          üzere çeşitli konularda kapsamlı ve güncel içerik sağlamaktır.
-        </p>
-      </div>
+      <p className="text-center">
+        Misyonumuz, okuyuculara İslami inançlar ve uygulamalar, Müslüman
+        tarihi, İslam sanatı ve kültürü ve güncel olaylar dahil olmak üzere
+        çeşitli konularda kapsamlı ve güncel içerik sağlamaktır.
+      </p>
     </Container>
   )
 }

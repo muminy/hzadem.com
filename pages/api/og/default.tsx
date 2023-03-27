@@ -27,9 +27,9 @@ export default async function handler() {
         }}
       >
         <div tw="flex text-white text-6xl font-black uppercase leading-[70px]">
-          GÜNLÜKTARİF
+          Fevri
         </div>
-        <div tw="bg-gray-200 rounded-xl px-2 py-1.5">.com</div>
+        <div tw="bg-gray-200 rounded-xl px-2 py-1.5">.Net</div>
       </div>
     ),
     {

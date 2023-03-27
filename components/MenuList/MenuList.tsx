@@ -11,19 +11,21 @@ export default function MenuList({ isResponsive }: MenuListProps) {
   const { asPath } = useRouter()
 
   const renderMenu = (item: CategoryType, isResponsive = false) => {
-    const isActive = `/kategori/${item.slug}` === asPath
+    const isActive = `/category/${item.slug}` === asPath
     return (
       <li key={item.slug}>
         <Permalink
           className={cn(
-            "px-3 py-2.5 rounded-2xl duration-200 text-white",
-            "font-bold text-sm hover:bg-dark-secondary",
+            "px-3 py-2.5 rounded-2xl duration-200",
+            "font-bold text-sm",
             {
-              "bg-dark-secondary": isActive,
+              "bg-gray-100 dark:bg-dark-secondary": isActive,
               "px-0 h-8 py-0 text-white !bg-transparent": isResponsive,
+              "hover:dark:bg-dark-secondary hover:bg-gray-100 text-black dark:text-white":
+                !isResponsive,
             }
           )}
-          href={`/kategori/${item.slug}`}
+          href={`/category/${item.slug}`}
           title={item.name}
         />
       </li>
@@ -36,7 +38,7 @@ export default function MenuList({ isResponsive }: MenuListProps) {
       as="ul"
       renderItem={(item) => renderMenu(item, isResponsive)}
       className={cn({
-        "hidden xl:flex lg:flex items-center space-x-1": !isResponsive,
+        "hidden xl:flex items-center space-x-1": !isResponsive,
         "flex-col block": isResponsive,
       })}
     />

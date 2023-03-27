@@ -5,6 +5,7 @@ import {
   QUERY_GET_POST_BY_SLUG,
   QUERY_POSTS,
   QUERY_POSTS_BY_CATEGORY_ID,
+  QUERY_POSTS_BY_TAG_NAME,
   QUERY_SEARCH_POSTS,
 } from "data/post"
 
@@ -20,7 +21,7 @@ export type WPPostDetail = {
 
 export async function getAllPosts() {
   try {
-    const heroLength = 8
+    const heroLength = 4
     const response = await client.query<WPPList>({ query: QUERY_POSTS })
     let remaining
 
@@ -63,7 +64,22 @@ export async function getPostCategory(id: number) {
 
     return response.data.posts.nodes.map(toPost)
   } catch (e) {
-    return null
+    return []
+  }
+}
+
+export async function getPostByTag(tag: string) {
+  try {
+    const response = await client.query<WPPList>({
+      query: QUERY_POSTS_BY_TAG_NAME,
+      variables: {
+        tag,
+      },
+    })
+
+    return response.data.posts.nodes.map(toPost)
+  } catch (e) {
+    return []
   }
 }
 

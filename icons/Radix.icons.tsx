@@ -38,6 +38,7 @@ export function SearchIcon({ size = 24, color = "currentColor" }: SvgProps) {
   )
 }
 
+
 export function WarningIcon({
   size = 24,
   color = "currentColor",

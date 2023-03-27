@@ -1,19 +1,19 @@
-import Breadcrumb from "@/components/Breadcrumb"
 import Container from "@/components/Container"
 import Icon from "@/components/Icon"
-import Permalink from "@/components/Permalink"
 import Repeater from "@/components/Repeater"
 import Seo from "@/components/Seo"
-import classNames from "classnames"
 import { MenuType } from "../types"
 
 export type ContactType = MenuType & {
   placeholder?: string
 }
 
-export default function Iletisim() {
+export default function Contact() {
   const contacts = [
-    { href: "https://twitter.com/hzademcom", title: "Twitter" },
+    {
+      href: "https://twitter.com/hzademcom",
+      title: "Twitter",
+    },
     {
       href: "mailto:help@codejs.dev",
       title: "Email",
@@ -26,28 +26,24 @@ export default function Iletisim() {
       <a
         href={item.href}
         key={key}
-        className={classNames(
-          "flex items-center space-x-2 text-sm py-3 px-4 rounded-xl",
-          "bg-gray-100 dark:bg-dark-secondary text-black dark:text-white"
-        )}
+        className="flex items-center space-x-2 text-sm bg-gray-100 dark:bg-dark-secondary py-3 px-4 rounded-xl"
       >
-        <div>{item.placeholder ?? item.title}</div>
-        <Icon size={16} icon="external" />
+        <div className="font-semibold">
+          {item.placeholder ?? item.title}
+        </div>
+        <Icon size={16} icon={"external"} />
       </a>
     )
   }
   return (
     <Container size="large">
-      <Seo title="İletişim" description="hzadem.com iletişim bilgileri" />
-      <Breadcrumb
-        items={[{ title: "Anasayfa", to: "/" }, { title: "İletişim" }]}
-      />
-      <h1 className="mb-5 mt-10 text-4xl font-black">
-        İletişim Adreslerimiz
+      <Seo title="İletişim" />
+      <h1 className="my-10 font-black text-2xl">
+        Bizimle İletişime geçin
       </h1>
 
       <Repeater<ContactType>
-        className="flex flex-col items-baseline space-y-2 article-content"
+        className="flex flex-col items-baseline space-y-2"
         items={contacts}
         renderItem={renderItem}
       />

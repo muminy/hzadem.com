@@ -21,7 +21,7 @@ const ArrowButtons = () => {
           "disabled:dark:bg-dark-secondary disabled:dark:text-white disabled:dark:!text-opacity-25",
           "disabled:text-opacity-25"
         )}
-        text="Önceki"
+        text="Prev"
         isDark
         textClassName="text-xs"
       />
@@ -36,7 +36,7 @@ const ArrowButtons = () => {
           "disabled:dark:text-opacity-25",
           "disabled:text-opacity-25"
         )}
-        text="Sonraki"
+        text="Next"
         isDark
         textClassName="text-xs mr-1"
       />

@@ -38,13 +38,13 @@ export default function Comment({
       .then(() => {
         showAlert({
           message:
-            "Yorumunuz gönderilmiştir. Onaylandıktan sonra listelenecektir.",
+            "Yorumunuz gönderildi. Onaylandıktan sonra listelenecektir.",
         })
         reset()
       })
       .catch(() => {
         showAlert({
-          message: "Yorum Gönderilemedi",
+          message: "Yorum Yayınlanamadı",
         })
       })
       .finally(() => {
@@ -56,7 +56,7 @@ export default function Comment({
     <div className={cn(className)}>
       <form
         onSubmit={handleSubmit(onCreateComment)}
-        className="space-y-2 mb-10"
+        className="space-y-2 mb-10 w-full"
       >
         <Title title="Yorum" />
         <div className="flex space-x-2">
@@ -77,18 +77,23 @@ export default function Comment({
         <Form.TextArea
           {...register("content", { required: true })}
           rows={5}
-          placeholder="çok lezzetli gözüküyor, elinize sağlık..."
+          placeholder="Mükemmel Yazıı..."
         />
-        <Button.Gradient disabled={loading} className="mb-10">
-          {loading ? "Gönderiliyor..." : "Gönder"}
-        </Button.Gradient>
+        <Button
+          isLoading={loading}
+          text={"Gönder"}
+          className="mb-10"
+        ></Button>
       </form>
       <Title title="Yorumlar" />
       <Repeater<CommentType>
         items={items}
         className="space-y-3"
         renderNotFound={
-          <NotFound title="Yorum Yok" description="İlk yorumu sen yap" />
+          <NotFound
+            title="Yorum Bulunamadı"
+            description="İlk yorumu sen yap!"
+          />
         }
         renderItem={(item, index) => <CommentCard {...item} key={index} />}
       />

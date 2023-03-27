@@ -2,25 +2,25 @@ import Breadcrumb from "@/components/Breadcrumb"
 import Container from "@/components/Container"
 import Seo from "@/components/Seo"
 
-export default function GizlilikPolitikasi() {
+export default function Privacy() {
   return (
-    <Container size="large">
+    <Container size="large" className="py-5">
       <Seo
         title="Gizlilik Politikası"
-        description="hzadem.com için hazırlanmış gizlilik politikasına ulaşabilirsiniz"
+        description="HzAdem.com Gizlilik Politikası"
       />
       <Breadcrumb
         items={[
-          { title: "Anasayfa", to: "/" },
+          { title: "Home", to: "/" },
           { title: "Gizlilik Politikası" },
         ]}
       />
-      <h1 className="!text-4xl font-black">Gizlilik Politikası</h1>
-      <div className="mb-10 text-sm text-gray-600 dark:text-gray-400">
-        Son Güncelleme: 03 Mart 2023 20:39
-      </div>
-
       <div className="article-content">
+        <h1 className="!text-4xl">Gizlilik Politikası</h1>
+        <div className="mb-10 text-sm text-gray-600 dark:text-gray-200">
+          Son Güncelleme: 20-03-2023 Pazartesi
+        </div>
+
         <p>
           Güvenliğiniz bizim için önemli. Bu sebeple bizimle paylaşacağınız
           kişisel verileriz hassasiyetle korunmaktadır.
@@ -122,9 +122,8 @@ export default function GizlilikPolitikasi() {
         </ul>
 
         <p>
-          Yukarıda sayılan haklarınızı kullanmak üzere{" "}
-          <b>help@codejs.dev</b> üzerinden bizimle iletişime
-          geçebilirsiniz.
+          Yukarıda sayılan haklarınızı kullanmak üzere help@codejs.dev
+          üzerinden bizimle iletişime geçebilirsiniz.
         </p>
 
         <h2>İletişim</h2>
@@ -135,9 +134,9 @@ export default function GizlilikPolitikasi() {
           kişisel verilerin işlenmesi politikası uyarınca işlenmesini,
           kabul edip etmemek hususunda tamamen özgürsünüz. Siteyi
           kullanmaya devam ettiğiniz takdirde kabul etmiş olduğunuz
-          tarafımızca varsayılacak olup, daha ayrıntılı bilgi için bizimle{" "}
-          <b>help@codejs.dev</b> e-mail adresi üzerinden iletişime
-          geçmekten lütfen çekinmeyiniz.
+          tarafımızca varsayılacak olup, daha ayrıntılı bilgi için bizimle
+          help@codejs.dev e-mail adresi üzerinden iletişime geçmekten
+          lütfen çekinmeyiniz.
         </p>
       </div>
     </Container>

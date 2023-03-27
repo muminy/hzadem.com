@@ -9,6 +9,7 @@ export function toPost({
   featuredImage,
   categories,
   comments,
+  tags,
   ...common
 }: WPPost): PostType {
   const post = {
@@ -22,6 +23,10 @@ export function toPost({
 
   if (featuredImage?.node) {
     post.image = featuredImage.node
+  }
+
+  if (tags.nodes) {
+    post.tags = tags.nodes
   }
 
   return {

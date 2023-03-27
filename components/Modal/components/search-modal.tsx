@@ -28,7 +28,7 @@ export default function SearchModal() {
   return (
     <Card className="dark:bg-black bg-white p-8">
       <Form.Input
-        placeholder="Hadisler, sünnetler...."
+        placeholder="Valorant..."
         onChange={(event) => setSearch(event.target.value)}
         className={classNames("py-4 px-6 mb-5")}
       />
@@ -38,17 +38,18 @@ export default function SearchModal() {
       ) : itemsLength(search) >= minQueryLength ? (
         <TextList
           notFound={{
-            title: "hiçbir şey bulunamadı",
-            description: "Aradığınız kriterlere göre bir yazı bulunamadı",
+            title: "Not Found",
+            description:
+              "No articles were found according to your search criteria.",
           }}
           title={{
-            title: loading ? "Aranıyor" : "Arama Sonuçları",
+            title: loading ? "Loading" : "Results",
           }}
           items={posts}
         />
       ) : (
         <Card className="dark:text-gray-600 text-gray-500 text-center">
-          Henüz Bir şey aramadın
+          You haven't searched for anything yet
         </Card>
       )}
     </Card>

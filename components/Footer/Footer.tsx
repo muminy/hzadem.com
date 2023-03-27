@@ -1,6 +1,5 @@
 import { MenuType } from "@/types/index"
 import classNames from "classnames"
-
 import { FooterProps } from "."
 import Container from "../Container"
 import Logo from "../Logo"
@@ -11,46 +10,49 @@ export default function Footer({
   className,
   ...remainingProps
 }: FooterProps) {
-  const footerMenu = [
-    { href: "/hakkimizda", title: "Hakkımızda" },
+  const contacts: MenuType[] = [
     { href: "/gizlilik-politikasi", title: "Gizlilik Politikası" },
+    { href: "/hakkimizda", title: "Hakkımızda" },
     { href: "/iletisim", title: "İletişim" },
   ]
 
-  const renderLink = (item: MenuType, key: number) => {
-    return (
-      <Permalink
-        key={key}
-        className="hover:text-blue-500 font-semibold dark:text-white dark:hover:text-blue-500 text-gray-900 duration-200"
-        title={item.title}
-        href={item.href}
-      />
-    )
-  }
+  const renderFooterLink = (item: MenuType, index: number) => (
+    <Permalink
+      className={classNames(
+        "dark:text-white text-sm",
+        "hover:dark:text-blue-500 duration-300"
+      )}
+      key={index}
+      href={item.href}
+      title={item.title}
+    />
+  )
 
   return (
-    <Container
-      {...remainingProps}
-      className={classNames(
-        "mt-auto",
-        "dark:bg-dark-secondary bg-gray-100 mb-0 rounded-none",
-        "p-10 flex flex-wrap space-y-5",
-        "2xl:mb-10 2xl:rounded-3xl"
-      )}
-    >
-      <div className="flex flex-col items-center w-full">
-        <Logo className="mb-4" />
-        <div className="text-sm font-medium text-center max-w-xl dark:text-gray-400 text-gray-600">
-          Misyonumuz, okuyuculara İslami inançlar ve uygulamalar, Müslüman
-          tarihi, İslam sanatı ve kültürü ve güncel olaylar dahil olmak
-          üzere çeşitli konularda kapsamlı ve güncel içerik sağlamaktır.
+    <Container size="big" className="xl:px-5 px-0 !mt-auto">
+      <div
+        {...remainingProps}
+        className={classNames(
+          "dark:bg-dark-secondary bg-gray-200 p-10 flex flex-col items-center grid-cols-12 space-y-5 justify-center",
+          "xl:mb-10 xl:rounded-3xl"
+        )}
+      >
+        <div className="space-y-2 flex flex-col justify-center text-gray-900 dark:text-white items-center">
+          <Logo size={24} />
+          <p className="text-sm xl:w-2/4 mx-auto text-center dark:text-gray-300 text-gray-500">
+            Misyonumuz, okuyuculara İslami inançlar ve uygulamalar,
+            Müslüman tarihi, İslam sanatı ve kültürü ve güncel olaylar
+            dahil olmak üzere çeşitli konularda kapsamlı ve güncel içerik
+            sağlamaktır.
+          </p>
         </div>
+
+        <Repeater<MenuType>
+          items={contacts}
+          className="flex items-center space-x-3"
+          renderItem={renderFooterLink}
+        />
       </div>
-      <Repeater<MenuType>
-        className="flex space-x-4 justify-center items-center w-full text-sm font-medium"
-        items={footerMenu}
-        renderItem={renderLink}
-      />
     </Container>
   )
 }

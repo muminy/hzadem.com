@@ -9,7 +9,9 @@ export default function Drawer({
   onClose,
 }: DrawerProps) {
   const { asPath } = useRouter()
-  useEffect(onClose, [asPath])
+  useEffect(() => {
+    onClose && onClose()
+  }, [asPath])
 
   return (
     <Transition.Root show={isActive} as={"div"}>
@@ -38,7 +40,7 @@ export default function Drawer({
                 leaveTo="translate-x-full"
               >
                 <Dialog.Panel className="pointer-events-auto relative w-screen max-w-[200px]">
-                  <div className="flex flex-col overflow-y-auto bg-black py-6 px-8 h-screen shadow-xl">
+                  <div className="flex flex-col overflow-y-auto bg-black py-3 px-3 h-screen shadow-xl">
                     {renderContent}
                   </div>
                 </Dialog.Panel>

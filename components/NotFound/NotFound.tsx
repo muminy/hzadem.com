@@ -10,10 +10,10 @@ export default function NotFound({ title, description }: NotFoundProps) {
         "w-full py-10 rounded-xl relative overflow-hidden"
       )}
     >
-      <div className="relative z-10">
-        <div className="text-2xl font-bold">{title}</div>
+      <div className="z-10 relative">
+        <div className="text-xl font-bold">{title}</div>
         {description && (
-          <div className="text-gray-500 dark:text-gray-500">
+          <div className="text-gray-500 dark:text-gray-400">
             {description}
           </div>
         )}

@@ -16,7 +16,11 @@ export default function Container({
   return (
     <div
       {...remainingProps}
-      className={classNames("container mx-auto", maxSize[size], className)}
+      className={classNames(
+        "container mx-auto 2xl:px-5 xl:px-10 lg:px-8 px-5",
+        maxSize[size],
+        className
+      )}
     />
   )
 }
