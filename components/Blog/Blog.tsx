@@ -77,7 +77,7 @@ export default function Blog({
 
   return (
     <Permalink
-      href={`/blog/${slug}`}
+      href={`/detay/${slug}`}
       className={classNames(
         "w-full relative duration-300",
         "group block rounded-xl hover:dark:ring-offset-dark-bg",
