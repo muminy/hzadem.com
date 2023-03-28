@@ -45,6 +45,7 @@ export type WPPost = {
   }
   excerpt: string
   date: string
+  modified: string
   commentCount: number
   readingTime: number
   slug: string

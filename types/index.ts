@@ -48,6 +48,7 @@ export type TagType = {
 export type PostType = {
   commentCount: number
   date: string
+  modified: string
   excerpt: string
   readingTime: number
   slug: string

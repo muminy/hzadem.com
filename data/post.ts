@@ -18,6 +18,7 @@ const FRAGMENTS_POST = gql`
         title
       }
     }
+    modified
     tags {
       nodes {
         ...TagFields
