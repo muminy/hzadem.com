@@ -62,7 +62,7 @@ body {
   @apply mt-0 mb-6 rounded-3xl relative;
 }
 .article-content .source-link::before {
-  content: 'Source';
+  content: 'Kaynak';
   display: block;
   @apply dark:text-gray-400 text-gray-500 font-medium text-sm mb-2;
 }
