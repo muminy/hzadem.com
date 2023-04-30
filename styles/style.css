@@ -61,6 +61,21 @@ body {
 .article-content figure {
   @apply mt-0 mb-6 rounded-3xl relative;
 }
+.article-content .source-link::before {
+  content: 'Source';
+  display: block;
+  @apply dark:text-gray-400 text-gray-500 font-medium text-sm mb-2;
+}
+
+.article-content .source-link {
+ @apply dark:bg-dark-secondary bg-gray-100 px-6 py-5;
+ @apply rounded-xl dark:text-white text-gray-900
+}
+
+.article-content .source-link a {
+  @apply dark:text-white text-gray-900 font-medium
+}
+
 .article-content figure figcaption {
   @apply text-center text-sm absolute top-2 left-2 px-4 py-2;
   @apply bg-primary text-black rounded-3xl;
