@@ -1,0 +1,57 @@
+.center-center {
+  @apply flex items-center justify-center;
+}
+
+.content-body p {
+  @apply font-medium text-lg;
+}
+
+.content-body > p {
+  @apply mb-10;
+}
+.content-body blockquote {
+  @apply border-l-4 border-blue-600 pl-4 py-4 mb-10;
+}
+
+.content-body blockquote p {
+  @apply font-semibold;
+}
+
+.content-body figure {
+  @apply mb-5;
+}
+.content-body :is(h1, h2, h3, h4, h5, h6) {
+  @apply mb-5 font-black;
+}
+
+.content-body :is(h1, h2) {
+  @apply text-5xl;
+}
+
+.content-body hr {
+  @apply mb-10;
+}
+.content-body :is(h3, h4) {
+  @apply text-3xl;
+}
+
+.content-body :is(ul, ol) {
+  @apply list-disc font-medium text-lg mb-10 pl-5;
+}
+
+.content-body a {
+  @apply font-semibold text-blue-600 underline underline-offset-4;
+  @apply hover:bg-blue-600 hover:text-white duration-300;
+}
+
+.content-body em {
+  @apply text-sm font-medium;
+}
+
+.content-body img {
+  @apply w-full;
+}
+
+.content-body :is(iframe, video, image) {
+  @apply w-full;
+}

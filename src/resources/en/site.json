@@ -1,0 +1,30 @@
+{
+  "more_button": "See More",
+  "comment": "Comment",
+  "comments": "Comments",
+  "categories": "Categories",
+  "popular_content": "Popular Content",
+  "see_all": "See All",
+  "index": "Home",
+  "last_posts": "Last Posts",
+  "all_loaded": "All Loaded",
+
+  "post_detail_path": "detail",
+  "category_path": "category",
+  "total_content": "Total {count} Articles",
+  "tags": "Tags",
+  "tag_path": "tag",
+
+  "form": {
+    "name": "Name",
+    "surname": "Surname",
+    "comment": "Comment",
+    "send": "Send"
+  },
+
+  "footer": {
+    "privacy_policy": "Privacy Policy",
+    "about_us": "About Us",
+    "contact": "Contact"
+  }
+}

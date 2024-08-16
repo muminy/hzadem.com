@@ -1,0 +1,30 @@
+@import "tailwind.css";
+
+:root {
+  --background: #ffffff;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --text-color: #080b12;
+  --secondary: #f5f6f8;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #171717;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 48, 51, 54;
+    --background-end-rgb: 20, 23, 26;
+    --text-color: #ffffff;
+    --secondary: #1f1f1f;
+  }
+} */
+
+body {
+  color: var(--text-color);
+}
+
+input,
+textarea {
+  @apply outline-none;
+}

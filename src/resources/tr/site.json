@@ -1,0 +1,32 @@
+{
+  "more_button": "Daha Fazlasını Gör",
+  "comment": "Yorum",
+  "comments": "Yorumlar",
+  "categories": "Kategoriler",
+  "popular_content": "Popüler İçerikler",
+  "see_all": "Tümünü Gör",
+  "index": "Anasayfa",
+  "last_posts": "Son Yazılar",
+  "all_loaded": "Tümü Yüklendi",
+
+  "post_detail_path": "detay",
+  "category_path": "kategori",
+  "total_content": "Toplam {count} Yazı",
+  "tags": "Etiketler",
+  "tag_path": "etiket",
+
+  "form": {
+    "name": "Ad",
+    "surname": "Soyad",
+    "comment": "Yorum",
+    "send": "Gönder"
+  },
+
+  "footer": {
+    "privacy_policy": "Gizlilik Politikası",
+    "about_us": "Hakkımızda",
+    "contact": "İletişim"
+  },
+
+  "post_detail": "Yazı Bilgisi"
+}
