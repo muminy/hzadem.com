@@ -10,7 +10,7 @@
   @apply mb-10;
 }
 .content-body blockquote {
-  @apply border-l-4 border-blue-600 pl-4 py-4 mb-10;
+  @apply border-l-4 border-gray-400 pl-4 py-4 mb-10 bg-secondary;
 }
 
 .content-body blockquote p {
