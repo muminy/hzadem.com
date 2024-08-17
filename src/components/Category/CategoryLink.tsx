@@ -29,7 +29,7 @@ export default function CategoryLink({
         </svg>
       </div>
       <div>
-        <h3 className="font-semibold text-sm">{name}</h3>
+        <h4 className="font-semibold text-sm">{name}</h4>
         <div className="text-xs font-medium text-gray-500">
           {replace(
             resources.total_content,

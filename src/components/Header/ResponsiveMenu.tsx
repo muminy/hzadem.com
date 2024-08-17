@@ -11,6 +11,7 @@ export default function ResponsiveMenu({
 }: ResponsiveMenuProps) {
   return (
     <button
+      aria-label="responsive-menu"
       onClick={() => showSheet("responsive-menu", { menu })}
       className="w-10 h-10 bg-secondary rounded-full center-center xl:!hidden md:!hidden block">
       <svg

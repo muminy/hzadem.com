@@ -12,7 +12,7 @@ export async function generateMetadata() {
 
 export default function Error() {
   return (
-    <Container className="py-10 bg-background">
+    <Container className="py-10 bg-background mt-10">
       <div className="bg-background p-20 text-center font-semibold rounded-xl">
         Bu hata bizden kaynaklanıyor.
       </div>

@@ -24,10 +24,14 @@ export default function HeroPostCard({
         className="h-full object-cover"
         width={1000}
         height={600}
+        placeholder="blur"
+        blurDataURL={getPostImage(featuredImage)}
       />
 
       <div className="absolute bottom-0 px-6 py-6 text-white z-10">
-        <h2 className="font-black text-3xl">{title}</h2>
+        <h2 className="font-black xl:text-3xl text-xl">
+          {title}
+        </h2>
       </div>
     </Link>
   )

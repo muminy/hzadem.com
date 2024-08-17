@@ -17,7 +17,7 @@ export default function TrendPostCard({
         "rounded-xl px-4 py-3 font-semibold text-sm leading-5 space-y-1",
         "hover:ring-2 ring-black ring-offset-white ring-offset-2 dark:ring-offset-background dark:ring-white/20"
       )}>
-      <h2>{title}</h2>
+      <h4>{title}</h4>
       <div className="font-medium text-xs">{getDate(date)}</div>
     </Link>
   )
