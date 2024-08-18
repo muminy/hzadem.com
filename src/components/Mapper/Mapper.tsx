@@ -24,17 +24,17 @@ export default function Mapper<T>({
   return (
     <Fragment>
       <Header />
-      {data.length === 0 ? (
-        <Empty />
-      ) : (
-        <Wrapper className={clsx(className)}>
-          {data.map((item, index) => (
+      <Wrapper className={clsx(className)}>
+        {data.length === 0 ? (
+          <Empty />
+        ) : (
+          data.map((item, index) => (
             <Fragment key={`${index}_render_fragment`}>
               {render(item, index)}
             </Fragment>
-          ))}
-        </Wrapper>
-      )}
+          ))
+        )}
+      </Wrapper>
     </Fragment>
   )
 }
