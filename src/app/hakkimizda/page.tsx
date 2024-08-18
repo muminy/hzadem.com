@@ -3,7 +3,10 @@ import Logo from ":/components/Logo/Logo"
 import { generateSeo } from ":/lib/metadata"
 
 export async function generateMetadata() {
-  return generateSeo({ title: "Hakkımızda" })
+  return generateSeo({
+    title: "Hakkımızda",
+    robots: { follow: false, index: false },
+  })
 }
 
 export default function About() {

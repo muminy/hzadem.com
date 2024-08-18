@@ -4,7 +4,7 @@ import TrendBlogs from ":/components/RightSidebars/TrendPost"
 import HeroBlogs from ":/components/Sections/HeroBlogs"
 import LatestPosts from ":/components/Sections/LatestPosts"
 
-import { generateSeo } from ":/lib/metadata"
+import { generateSeo, websiteSchema } from ":/lib/metadata"
 
 export async function generateMetadata() {
   return generateSeo({})
@@ -23,6 +23,12 @@ export default async function Home() {
           <TrendBlogs />
         </div>
       </Container>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteSchema),
+        }}
+      />
     </div>
   )
 }

@@ -3,7 +3,10 @@ import Container from ":/components/Container/Container"
 import { generateSeo } from ":/lib/metadata"
 
 export async function generateMetadata() {
-  return generateSeo({ title: "Gizlilik Politikası" })
+  return generateSeo({
+    title: "Gizlilik Politikası",
+    robots: { follow: false, index: false },
+  })
 }
 
 export default function Privacy() {

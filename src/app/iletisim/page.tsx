@@ -10,7 +10,10 @@ export type ContactType = {
 }
 
 export async function generateMetadata() {
-  return generateSeo({ title: "İletişim" })
+  return generateSeo({
+    title: "İletişim",
+    robots: { follow: false, index: false },
+  })
 }
 
 export default function Contact() {

@@ -1,5 +1,8 @@
+import { PostProps } from ":/components/PostCards"
 import { config } from ":/constants/site"
 import type { Metadata } from "next"
+import { getPostImage, removeHtmlTags } from "./utils"
+import type { BreadcrumbType } from ":/components/Breadcrumb"
 
 const defaultSeo = {
   image: `${config.domain}/images/default.jpeg`,
@@ -64,4 +67,37 @@ export const NotFoundMetaData = {
     follow: false,
     index: false,
   },
+}
+
+export const getBlogJsonLD = (post: PostProps) => ({
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: post.title,
+  description: removeHtmlTags(post.excerpt),
+  author: {
+    "@type": "Person",
+    name: post.author.node.name,
+  },
+  datePublished: post.date,
+  image: getPostImage(post.featuredImage),
+})
+
+export const getBreadcrumJsonLD = (
+  crumbs: BreadcrumbType[]
+) => ({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: crumbs.map((item, key) => ({
+    "@type": "ListItem",
+    position: key + 1,
+    name: item.title,
+    item: `${config.domain}${item.to}`,
+  })),
+})
+
+export const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "HzAdem",
+  url: config.domain,
 }

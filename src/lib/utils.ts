@@ -2,11 +2,16 @@ import "dayjs/locale/tr"
 
 import dayjs from "dayjs"
 import { get } from "lodash"
+import { config } from ":/constants/site"
 
 dayjs.locale("tr")
 
 export const getPostImage = (data: unknown): string => {
-  return get(data, "node.sourceUrl", "")
+  return get(
+    data,
+    "node.sourceUrl",
+    config.domain + "/images/default.jpeg"
+  )
 }
 
 export const getDate = (date: string) => {
