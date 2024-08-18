@@ -60,7 +60,7 @@ export default async function BlogDetail({
       ...breadcrumb,
       {
         title: data.title,
-        to: `/${resources.index}/${data.slug}`,
+        to: `/${resources.post_detail_path}/${data.slug}`,
       },
     ]
   }
