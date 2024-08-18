@@ -30,9 +30,9 @@ export default function LinePost({
           className="line-clamp-3"
         />
         <div className="flex gap-4 flex-wrap">
-          <time className="text-xs font-semibold bg-gray-100 dark:bg-secondary rounded-xl px-2 py-1 inline-block">
+          <span className="text-xs font-semibold bg-gray-100 dark:bg-secondary rounded-xl px-2 py-1 inline-block">
             {getDate(date)}
-          </time>
+          </span>
           <div className="bg-gray-100 dark:bg-secondary px-2 py-1 rounded-xl text-xs font-semibold">
             {commentCount ?? 0} {resources.comment}
           </div>

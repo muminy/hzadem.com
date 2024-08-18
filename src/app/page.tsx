@@ -12,7 +12,7 @@ export async function generateMetadata() {
 
 export default async function Home() {
   return (
-    <main className="bg-secondary py-5">
+    <div className="bg-secondary py-5">
       <HeroBlogs />
       <Container className="grid grid-cols-12 xl:gap-x-10 gap-x-0">
         <div className="xl:col-span-8 col-span-12">
@@ -23,7 +23,7 @@ export default async function Home() {
           <TrendBlogs />
         </div>
       </Container>
-    </main>
+    </div>
   )
 }
 

@@ -3,8 +3,8 @@ import type { Metadata } from "next"
 
 const defaultSeo = {
   image: `${config.domain}/images/default.jpeg`,
-  title: "hzadem.com | Kur'an ışığında Kur'an'a Dair Her Şey!",
-  description: "Kur'an ışığında Kur'an'a Dair Her Şey!",
+  title: "hzadem.com | Kuran ışığında Kurana Dair Her Şey!",
+  description: "Kuran ışığında Kurana Dair Her Şey!",
   keywords:
     "Kuran, hz adem, peygamber efendimiz, islam, hzadem kimdir, hzadem'in hayatı",
   twitter: {

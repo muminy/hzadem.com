@@ -19,7 +19,7 @@ export default function MainLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="light">
+    <html lang="tr" className="light">
       <body
         className={`flex flex-col min-h-screen ${inter.className}`}>
         <Suspense fallback={<div>Tesssssst</div>}>
