@@ -22,9 +22,7 @@ export default function MainLayout({
     <html lang="tr" className="light">
       <body
         className={`flex flex-col min-h-screen ${inter.className}`}>
-        <Suspense fallback={<div>Tesssssst</div>}>
-          <Header />
-        </Suspense>
+        <Header />
         <main className="bg-secondary min-h-[calc(100vh-150px)]">
           {children}
         </main>
