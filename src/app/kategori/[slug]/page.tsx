@@ -12,6 +12,8 @@ export interface CategoryPageProps {
   params: { slug: string }
 }
 
+export const revalidate = 60
+
 export async function generateMetadata({
   params,
 }: CategoryPageProps) {
