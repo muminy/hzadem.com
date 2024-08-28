@@ -18,10 +18,10 @@ export default async function Home() {
         <div className="xl:col-span-8 col-span-12">
           <LatestPosts />
         </div>
-        <div className="xl:col-span-4 col-span-12 xl:pt-[140px] pt-4 space-y-10">
+        <aside className="xl:col-span-4 col-span-12 xl:pt-[140px] pt-4 space-y-10">
           <Categories />
           <TrendBlogs />
-        </div>
+        </aside>
       </Container>
       <script
         type="application/ld+json"

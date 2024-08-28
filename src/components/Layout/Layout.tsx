@@ -3,7 +3,6 @@ import ":/styles/globals.css"
 import Header from ":/components/Header/Header"
 import Footer from ":/components/Footer/Footer"
 import { Toaster } from "sonner"
-import { Suspense } from "react"
 import SheetContext from "../Sheet/SheetContext"
 import { GoogleAnalytics } from "@next/third-parties/google"
 
